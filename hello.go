@@ -1,3 +1,8 @@
+//@author Jordy Mugeni
+// This code is experimental, and is written to explore golang
+// Nothing serious just learning Golang while spending time in the hospital
+// with my daugther Jade Shrukrani by her bed side.
+
 package main
 
 import ("fmt"
@@ -6,7 +11,7 @@ import ("fmt"
 "io/ioutil"
 "strings"
 )
-
+//
 func (vh *viewHandler) ServerHTTP (w http.ResponseWriter, r *http.Request){
 
 path:=r.URL.Path [1:]
@@ -37,9 +42,10 @@ w.write ([]byte ("404 - " + http.StatusText (404)))
 }
 
 }
-
+// Main function
 func main (){
 fmt.Printf ("Hello Jordy Mugeni , Welcome to Golang\n")
+fmt.Printf ("Hope you have fun with Golang ... lol ")
 http.Handle ("/",new (viewHandler))
 http.ListenAndServe (":8282",nil)
 }
